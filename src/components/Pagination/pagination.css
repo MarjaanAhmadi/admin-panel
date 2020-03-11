@@ -1,0 +1,26 @@
+.active {
+    background-color: #6b3586;
+    color: white !important;
+}
+
+
+ul {
+    list-style-type: none;
+    display: inline-flex !important;
+    padding: 20px;
+}
+li a{
+    color: #757575;
+    padding: 10px;
+}
+li.active a {
+    color: white;
+}
+li.active a:hover {
+    color: white;
+}
+li a:hover {
+    text-decoration: none;
+    color: #6b3586;
+    cursor: pointer;
+}

@@ -1,0 +1,19 @@
+.page-item.active .page-link.custom-pagination {
+    z-index: 1;
+    color: #fff;
+    background-color: #6b3586 !important;
+    border-color: #6b3586 !important;
+}
+.table-sep {
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+.header-font{
+    font-size: 14px;
+}
+.filter-section {
+    justify-content: space-between;
+}
+.inertim-btn {
+    float: left;
+}

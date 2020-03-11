@@ -1,0 +1,12 @@
+#main {
+    transition: margin-right .5s;
+}
+.show-width {
+    width: 250px;
+}
+.main-margin {
+    margin-right: 250px;
+}
+.sub-margin {
+    margin-right: 50px;
+}

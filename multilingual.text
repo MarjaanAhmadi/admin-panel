@@ -1,0 +1,104 @@
+       import React, {useState, useEffect} from 'react';
+       import {useDispatch, useSelector} from "react-redux";
+       import './App.css';
+       import {withNamespaces} from "react-i18next";
+       import i18n from './i18n';
+       import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
+
+
+       const App = ({t}) => {
+
+         const language = useSelector(state => state.language)
+         const dispatch = useDispatch()
+         const [dropDownShow, setDropDownShow] = useState(false)
+         const [direction, setDirection] = useState('rtl')
+         const [showNav, setShowNav] = useState(false)
+
+
+            const showSidebar = () => {
+             setShowNav(!showNav)
+           }
+
+         const openDropDown = () => {
+             setDropDownShow(!dropDownShow)
+         }
+
+         const getDirection = () => {
+           language === 'per' ? setDirection('rtl') : setDirection('ltr')
+         }
+
+         useEffect(() => {
+             getDirection()
+             i18n.changeLanguage(language);
+
+         },[language])
+
+         return (
+           <div className={`App ${direction}`}>
+
+             <div id="mySidebar" className={`sidebar shadow bg-white rounded ${showNav ? 'show-width' : ''}`}>
+                 <button className="openbtn" onClick={showSidebar}>☰</button>
+               <a href="#">About</a>
+               <a href="#">Services</a>
+               <a href="#">Clients</a>
+               <a href="#">Contact</a>
+             </div>
+
+             <div id="main" className={showNav ? 'main-margin' : ''}>
+                 <div className="shadow p-3 mb-5 bg-white rounded header-height">
+                     <div className="header-item">
+                             <span>پنل مدیریت</span>
+                             <span>1234567</span>
+                     </div>
+                 </div>
+             </div>
+
+
+        <header className="App-header">
+                     <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                         <a className="navbar-brand" href="#">{t('Welcome to React')}</a>
+                         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                             <span className="navbar-toggler-icon"></span>
+                         </button>
+
+                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                             <ul className="navbar-nav mr-auto">
+                                 <li className="nav-item active">
+                                     <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                                 </li>
+                                 <li className="nav-item">
+                                     <a className="nav-link" href="#">Link</a>
+                                 </li>
+                                 <li className="nav-item dropdown">
+                                     <a className="nav-link dropdown-toggle"  onClick={openDropDown} href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                         Dropdown
+                                     </a>
+                                     <div className={`dropdown-menu ${dropDownShow ? 'show-dropDown' : ''}`} aria-labelledby="navbarDropdown">
+                                         <a className="dropdown-item" onClick={() => {
+                                             dispatch({selectedLanguage: 'de', type: 'CHANGE_LANGUAGE'})
+                                             setDropDownShow(false)
+                                         }}>De</a>
+                                         <a className="dropdown-item" onClick={() => {
+                                             dispatch({selectedLanguage: 'per', type: 'CHANGE_LANGUAGE'})
+                                             setDropDownShow(false)
+                                         }}>فارسی</a>
+
+                                     </div>
+                                 </li>
+
+                             </ul>
+                         </div>
+                     </nav>
+                 </header>
+
+           </div>
+         );
+       }
+
+       export default withNamespaces()(App);
+
+
+
+

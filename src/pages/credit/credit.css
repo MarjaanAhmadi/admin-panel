@@ -1,0 +1,7 @@
+.amount-input {
+    border-bottom: 1px solid gray !important;
+    border-radius: 0 !important;
+}
+.amount-input:focus {
+    border-bottom: 1px solid #6b3586 !important;
+}

@@ -1,0 +1,218 @@
+@font-face
+{
+  font-family: iransans;
+  src: url("./assets/fonts/iransans/iransans_ultralight.woff2") format("woff2");
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face
+{
+  font-family: iransans;
+  src: url("./assets/fonts/iransans/iransans_regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face
+{
+  font-family: iransans;
+  src: url("./assets/fonts/iransans/iransans_medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+.App {
+  font-family: iransans;
+
+}
+.modal-content {
+  font-family: iransans;
+  float: right;
+}
+.form-group label {
+  float: right;
+}
+.modal-content .modal-header button {
+  display: none;
+}
+.modal-content .modal-header {
+  direction: rtl;
+}
+.form-group input {
+  text-align: right;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+.show-dropDown {
+  display: block !important;
+}
+.sidebar {
+  height: 100%;
+  width: 50px;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  color: #757575 !important;
+  padding: 5px 15px;
+  border: 50px;
+  background-color: transparent;
+}
+
+.openbtn:hover {
+  background-color: #d0d0d0 !important;
+  color: black;
+}
+
+
+#main {
+  transition: margin-right .5s;
+}
+.show-width {
+  width: 250px;
+}
+.main-margin {
+  margin-right: 250px;
+}
+.sub-margin {
+  margin-right: 50px;
+}
+.header-height{
+  height: 75px;
+}
+.header-item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.main-container {
+  padding: 0 60px !important;
+}
+.user-data {
+  margin-left: 30px !important;
+}
+
+.btn-custom{
+  background-color: #6b3586 !important;
+  border-color: #6b3586 !important;
+  align-items: center;
+  border-radius: 0;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-weight: 500;
+  -webkit-box-pack: center;
+  justify-content: center;
+  min-width: 88px;
+  outline: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: .3s cubic-bezier(.25,.8,.5,1),color 1ms;
+  position: relative;
+  vertical-align: middle;
+  user-select: none;
+  font-size: 15px;
+  height: 44px;
+  padding: 0 32px;
+  color: white;
+  font-weight: 500;
+}
+
+.custom-input {
+  border: none !important;
+}
+.custom-input:focus{
+  color: #6b3586;
+  border: none !important;
+  outline: 0;
+  box-shadow:none !important;
+}
+.table-width-item {
+  width: 150px;
+  text-align: center;
+  font-size: 13px;
+  color: #757575;
+}
+.table-header-row{
+  justify-content: space-evenly;
+}
+
+.table-item:hover{
+  background-color: #eee!important;
+}
+.table-header-item {
+  color: #bdbdbd !important;
+  font-size: 14px !important;
+}
+.pointer {
+  cursor: pointer;
+}
+.icon-color {
+  font-size: 15px !important;
+}
+.active-icon {
+  color: #6b3586 !important;
+}
+.icon-color:hover {
+  color: #6b3586 !important;
+}
+.search-items {
+  justify-content: space-around;
+  flex-direction: row;
+  display: flex;
+}
+
+.toggle-icon:hover {
+  color: #6b3586;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.app-loading {
+  opacity: 0.1;
+  filter: alpha(opacity=50) !important;
+  width: 100%;
+  height: 100%;
+}
+.loading {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+.Toastify__toast-body {
+  font-family: iransans !important;
+}
+
